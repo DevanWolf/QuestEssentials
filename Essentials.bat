@@ -1,7 +1,8 @@
 @ECHO OFF
 adb logcat -G 64K
 IF %ERRORLEVEL%=0(adb uninstall com.oculus.mobile_mrc_setup
-adb shell pm disable-user com.android.providers.calendar
+adb shell pm disable-user com.oculus.updater
+adb shell pm disable-user android.providers.calendar
 adb shell pm disable-user com.oculus.statscollector
 adb shell pm disable-user com.oculus.magicislandcastingservice
 adb shell pm disable-user com.oculus.captionservice
@@ -20,7 +21,6 @@ adb shell pm disable-user com.oculus.bugreportuploader
 adb shell pm disable-user com.oculus.qplservice
 adb shell pm disable-user com.oculus.vrprivacycheckup
 adb shell pm disable-user com.meta.shellavatar
-adb shell pm disable-user meta.skymap.service
 adb shell pm disable-user android.ext.shared
 adb shell pm disable-user com.android.onetimeinitializer
 adb shell pm disable-user com.android.server.telecom
@@ -61,7 +61,6 @@ adb shell settings put global car_dock_sound ''
 adb shell settings put global car_undock_sound ''
 adb shell settings put global cdma_cell_broadcast_sms 0
 adb shell settings put global data_roaming 0
-adb shell settings put global development_settings_enabled 1
 adb shell settings put global device_config_sync_disabled 1
 adb shell settings put global dropbox_quota_kb 0
 adb shell settings put global lock_sound ''
@@ -78,7 +77,7 @@ adb shell settings put global network_scoring_ui_enabled 0
 adb shell settings put global ota_disable_automatic_update 1
 adb shell settings put global power_sounds_enabled 0
 adb shell settings put global preferred_network_mode 1
-adb shell settings put global settings_enable_monitor_phantom_procs false
+adb shell settings put global send_action_app_error 0
 adb shell settings put global tether_offload_disabled 1
 adb shell settings put global trusted_sound ''
 adb shell settings put global unlock_sound ''
@@ -91,6 +90,7 @@ adb shell settings put secure accessibility_display_magnification_scale 1.0
 adb shell settings put secure charging_vibration_enabled 0
 adb shell settings put secure mount_play_not_snd 0
 adb shell settings put secure screensaver_activate_on_dock 0
+adb shell settings put secure send_action_app_error 0
 adb shell settings put secure stay_on_while_plugged_in 3
 adb install DeskClock.apk
 adb install ExactCalculator.apk
