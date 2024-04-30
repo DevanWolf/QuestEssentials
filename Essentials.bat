@@ -1,6 +1,8 @@
 @ECHO OFF
 adb logcat -G 64K
 adb uninstall com.oculus.mobile_mrc_setup
+adb shell device_config set_sync_disabled_for_tests persistent
+adb shell device_config put activity_manager max_phantom_processes 2147483647
 adb shell pm disable-user com.android.providers.calendar
 adb shell pm disable-user com.oculus.statscollector
 adb shell pm disable-user com.oculus.magicislandcastingservice
@@ -17,7 +19,6 @@ adb shell pm disable-user com.oculus.extrapermissions
 adb shell pm disable-user com.oculus.panelapp.kiosk
 adb shell pm disable-user com.android.provision
 adb shell pm disable-user com.oculus.bugreportuploader
-adb shell pm disable-user com.oculus.qplservice
 adb shell pm disable-user com.oculus.vrprivacycheckup
 adb shell pm disable-user com.meta.shellavatar
 adb shell pm disable-user meta.skymap.service
@@ -42,6 +43,8 @@ adb shell pm disable-user com.oculus.ovrmonitormetricsservice
 adb shell pm disable-user com.oculus.permissioncontroller.rro
 adb shell pm disable-user com.oculus.environment.prod.bubbles
 adb shell pm disable-user com.oculus.environment.prod.adobe
+adb shell pm disable-user com.meta.environment.prod.nuxd
+adb shell pm disable-user com.meta.environment.prod.stinson.launchpad
 adb shell settings put system dtmf_tone 0
 adb shell settings put system mode_ringer_streams_affected 0
 adb shell settings put system mute_streams_affected 0
@@ -111,6 +114,7 @@ adb shell settings put secure speak_password 0
 adb shell settings put secure stay_on_while_plugged_in 3
 adb shell settings put secure volume_hush_gesture 0
 adb shell settings put secure wake_gesture_enabled 0
+adb shell settings put secure wifi_wakeup_enabled 0
 adb install DeskClock.apk
 adb install ExactCalculator.apk
 adb install blackvoid.apk
