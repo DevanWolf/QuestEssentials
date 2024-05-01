@@ -79,6 +79,8 @@ adb shell settings put global development_settings_enabled 1
 adb shell settings put global device_config_sync_disabled 1
 adb shell settings put global dock_audio_media_enabled 0
 adb shell settings put global dropbox_quota_kb 0
+adb shell settings put global hdmi_control_auto_device_off_enabled 0
+adb shell settings put global heads_up_notifications_enabled 0
 adb shell settings put global lock_sound null
 adb shell settings put global mobile_data 0
 adb shell settings put global netstats_enabled 0
@@ -87,7 +89,9 @@ adb shell settings put global network_scoring_ui_enabled 0
 adb shell settings put global ota_disable_automatic_update 1
 adb shell settings put global power_sounds_enabled 0
 adb shell settings put global preferred_network_mode 1
+adb shell settings put global private_dns_specifier dns.adguard.com
 adb shell settings put global settings_enable_monitor_phantom_procs false
+adb shell settings put global stay_on_while_plugged_in 3
 adb shell settings put global tether_offload_disabled 1
 adb shell settings put global trusted_sound null
 adb shell settings put global unlock_sound null
@@ -101,8 +105,9 @@ adb shell settings put secure charging_vibration_enabled 0
 adb shell settings put secure double_tap_to_wake 0
 adb shell settings put secure lock_screen_allow_private_notifications 0
 adb shell settings put secure lock_screen_show_notifications 0
+adb shell settings put secure lockscreen_show_controls 0
+adb shell settings put secure lockscreen_show_wallet 0
 adb shell settings put secure mount_play_not_snd 0
-adb shell settings put secure notification_badging 0
 adb shell settings put secure notification_bubbles 0
 adb shell settings put secure power_menu_locked_show_content 0
 adb shell settings put secure screensaver_activate_on_dock 0
@@ -111,7 +116,6 @@ adb shell settings put secure screensaver_default_component ''
 adb shell settings put secure screensaver_enabled 0
 adb shell settings put secure show_zen_settings_suggestion 0
 adb shell settings put secure speak_password 0
-adb shell settings put secure stay_on_while_plugged_in 3
 adb shell settings put secure volume_hush_gesture 0
 adb shell settings put secure wake_gesture_enabled 0
 adb shell settings put secure wifi_wakeup_enabled 0
