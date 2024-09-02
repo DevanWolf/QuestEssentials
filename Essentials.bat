@@ -6,7 +6,7 @@ adb shell device_config put activity_manager max_phantom_processes 2147483647
 adb shell pm disable-user com.android.providers.calendar
 adb shell pm disable-user com.oculus.statscollector
 adb shell pm disable-user com.oculus.magicislandcastingservice
-adb shell pm disable-user com.oculus.captionservice
+adb shell pm disable-user com.oculus.qplservice
 adb shell pm disable-user com.oculus.cvp
 adb shell pm disable-user com.android.providers.tv
 adb shell pm disable-user com.oculus.identitymanagement.service
