@@ -3,16 +3,13 @@ adb logcat -G 64K
 adb uninstall com.oculus.mobile_mrc_setup
 adb shell device_config set_sync_disabled_for_tests persistent
 adb shell device_config put activity_manager max_phantom_processes 2147483647
-adb shell pm disable-user com.android.providers.calendar
 adb shell pm disable-user com.oculus.statscollector
-adb shell pm disable-user com.oculus.magicislandcastingservice
 adb shell pm disable-user com.oculus.qplservice
 adb shell pm disable-user com.oculus.cvp
 adb shell pm disable-user com.android.providers.tv
 adb shell pm disable-user com.oculus.identitymanagement.service
 adb shell pm disable-user com.facebook.wearable.system.location.proxy
 adb shell pm disable-user com.facebook.wearable.system.location.service
-adb shell pm disable-user com.oculus.integrity
 adb shell pm disable-user com.android.modulemetadata
 adb shell pm disable-user com.meta.automation.pauldron.vr
 adb shell pm disable-user com.oculus.extrapermissions
@@ -20,12 +17,9 @@ adb shell pm disable-user com.oculus.panelapp.kiosk
 adb shell pm disable-user com.android.provision
 adb shell pm disable-user com.oculus.bugreportuploader
 adb shell pm disable-user com.oculus.vrprivacycheckup
-adb shell pm disable-user com.meta.shellavatar
-adb shell pm disable-user meta.skymap.service
 adb shell pm disable-user android.ext.shared
 adb shell pm disable-user com.android.onetimeinitializer
 adb shell pm disable-user com.android.server.telecom
-adb shell pm disable-user com.oculus.systempermissions
 adb shell pm disable-user android.ext.services
 adb shell pm disable-user com.android.managedprovisioning
 adb shell pm disable-user com.meta.federatedcomputing.oculus
@@ -36,8 +30,6 @@ adb shell pm disable-user com.oculus.q4b.mdm
 adb shell pm disable-user com.android.providers.blockednumber
 adb shell pm disable-user com.android.providers.userdictionary
 adb shell pm disable-user com.android.providers.contacts
-adb shell pm disable-user com.android.cts.ctsshim
-adb shell pm disable-user com.android.cts.priv.ctsshim
 adb shell pm disable-user com.oculus.oemconfig
 adb shell pm disable-user com.oculus.ovrmonitormetricsservice
 adb shell pm disable-user com.oculus.permissioncontroller.rro
@@ -122,7 +114,5 @@ adb shell settings put secure wifi_wakeup_enabled 0
 adb install DeskClock.apk
 adb install ExactCalculator.apk
 adb install blackvoid.apk
-adb shell pm disable-user com.environment.blackvoid
-adb install Passthrough.apk
 adb install Files.apk
 adb install-multiple Music\base.apk Music\split_config.arm64_v8a.apk Music\split_config.xhdpi.apk
