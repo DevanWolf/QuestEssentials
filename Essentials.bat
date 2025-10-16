@@ -12,11 +12,9 @@ adb shell pm disable-user com.facebook.wearable.system.location.proxy
 adb shell pm disable-user com.facebook.wearable.system.location.service
 adb shell pm disable-user com.android.modulemetadata
 adb shell pm disable-user com.meta.automation.pauldron.vr
-adb shell pm disable-user com.oculus.extrapermissions
 adb shell pm disable-user com.oculus.panelapp.kiosk
 adb shell pm disable-user com.android.provision
 adb shell pm disable-user com.oculus.bugreportuploader
-adb shell pm disable-user com.oculus.vrprivacycheckup
 adb shell pm disable-user android.ext.shared
 adb shell pm disable-user com.android.onetimeinitializer
 adb shell pm disable-user com.android.server.telecom
@@ -29,7 +27,6 @@ adb shell pm disable-user com.android.bookmarkprovider
 adb shell pm disable-user com.oculus.q4b.mdm
 adb shell pm disable-user com.android.providers.blockednumber
 adb shell pm disable-user com.android.providers.userdictionary
-adb shell pm disable-user com.android.providers.contacts
 adb shell pm disable-user com.oculus.oemconfig
 adb shell pm disable-user com.oculus.ovrmonitormetricsservice
 adb shell pm disable-user com.oculus.permissioncontroller.rro
@@ -116,3 +113,4 @@ adb install ExactCalculator.apk
 adb install blackvoid.apk
 adb install Files.apk
 adb install-multiple Music\base.apk Music\split_config.arm64_v8a.apk Music\split_config.xhdpi.apk
+adb install NextPlayer.apk
